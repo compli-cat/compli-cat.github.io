@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+    /* Only used in background and fake 'holepunched' look */
+    --page-bg: #4c2c50;
+    /* Meant for text, borders (if needed), etc. */
+    --offwhite: #e1e1e1;
+    /* UI elements that match the rest of the page by default. */
+    --transp-a: #ffffff2c;
+    --transp-b: #ffffff0e;
+}
+
+body {
+    background-color: var(--page-bg);
+}
+
+@font-face {
+    font-family: "Madani";
+    src: url("./assets/fonts/madani_2/MadaniArabicDEMO-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.card {
+    margin-top: 1%;
+    height: 40vw;
+    border-radius: 20px;
+
+    /* To ensure content is always in the middle of a card.*/
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Madani";
+    font-weight: bolder;
+    font-size: 20vh;
+    color: var(--offwhite);
+}
+
+h2 {
+    font-family: "Madani";
+    font-weight: bolder;
+    font-size: 10vh;
+    color: var(--offwhite);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--offwhite);
+}
+
+nav {
+    background-color: var(--transp-a);
+    backdrop-filter: blur(20px);
+    a {
+        font-weight: bold;
+        color: #e1e1e1;
+        .router-link-exact-active {
+            color: #858585;
+        }
+    }
+}
+
+#about {
+    display: grid;
+    grid-template-columns:  2fr 3fr;
+    grid-template-rows:     1fr 1fr;
+    grid-template-areas:    
+    "title title"
+    "profile txt";
+
+    #title {
+        grid-area: title;
+        text-align: left;
+    }
+    #profile {
+        grid-area: profile;
+    }
+    #txt {
+        grid-area: txt;
+        text-align: left;
+    }
+}
