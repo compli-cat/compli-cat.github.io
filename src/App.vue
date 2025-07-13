@@ -1,6 +1,6 @@
 <template>
   <div class="px-4">
-    <nav class="sticky top-0 z-50 rounded-lg">
+    <nav class="sticky top-0 z-50 rounded-xl">
       <router-link active-class="active" to="/"       >Home</router-link> |
       <router-link active-class="active" to="/about"  >About</router-link> |
       <router-link active-class="active" to="/games"  >Games</router-link> |

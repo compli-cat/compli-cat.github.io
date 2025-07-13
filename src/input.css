@@ -5,13 +5,30 @@
     --page-bg: #4c2c50;
     /* Meant for text, borders (if needed), etc. */
     --offwhite: #e1e1e1;
+    --greyish: #363636;
     /* UI elements that match the rest of the page by default. */
-    --transp-a: #ffffff2c;
+    --transp-a: #ffffff21;
     --transp-b: #ffffff0e;
+}
+
+* {
+    color: var(--offwhite);
 }
 
 body {
     background-color: var(--page-bg);
+}
+
+input {
+    color: var(--greyish);
+    border-radius: 5px;
+}
+textarea {
+    color: var(--greyish);
+    border-radius: 5px;
+}
+button {
+    border-radius: 5px;
 }
 
 @font-face {
@@ -24,7 +41,7 @@ body {
 
 .card {
     margin-top: 1%;
-    height: 40vw;
+    height: 41vw;
     border-radius: 20px;
 
     /* To ensure content is always in the middle of a card.*/
@@ -47,9 +64,27 @@ h2 {
     color: var(--offwhite);
 }
 
+h3 {
+    font-family: "Madani";
+    font-weight: bolder;
+    font-size: 6vh;
+    color: var(--offwhite);
+}
+
+h4 {
+    font-family: "Madani";
+    font-weight: bolder;
+    font-size: 3vh;
+    color: var(--offwhite);
+}
+
 p {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--offwhite);
+}
+
+textarea {
+    width: 50vw;
 }
 
 nav {

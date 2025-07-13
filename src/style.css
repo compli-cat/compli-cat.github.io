@@ -8,7 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -168,11 +168,11 @@
   .z-50 {
     z-index: 50;
   }
-  .mx-2 {
-    margin-inline: calc(var(--spacing) * 2);
-  }
   .mx-4 {
     margin-inline: calc(var(--spacing) * 4);
+  }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
   }
   .table {
     display: table;
@@ -183,12 +183,15 @@
   .resize {
     resize: both;
   }
-  .rounded-lg {
-    border-radius: var(--radius-lg);
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .bg-\[var\(--offwhite\)\] {
+    background-color: var(--offwhite);
   }
   .bg-\[var\(--transp-a\)\] {
     background-color: var(--transp-a);
@@ -199,11 +202,11 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .underline {
     text-decoration-line: underline;
@@ -220,11 +223,26 @@
 :root {
   --page-bg: #4c2c50;
   --offwhite: #e1e1e1;
-  --transp-a: #ffffff2c;
+  --greyish: #363636;
+  --transp-a: #ffffff21;
   --transp-b: #ffffff0e;
+}
+* {
+  color: var(--offwhite);
 }
 body {
   background-color: var(--page-bg);
+}
+input {
+  color: var(--greyish);
+  border-radius: 5px;
+}
+textarea {
+  color: var(--greyish);
+  border-radius: 5px;
+}
+button {
+  border-radius: 5px;
 }
 @font-face {
   font-family: "Madani";
@@ -235,7 +253,7 @@ body {
 }
 .card {
   margin-top: 1%;
-  height: 40vw;
+  height: 41vw;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -253,9 +271,24 @@ h2 {
   font-size: 10vh;
   color: var(--offwhite);
 }
+h3 {
+  font-family: "Madani";
+  font-weight: bolder;
+  font-size: 6vh;
+  color: var(--offwhite);
+}
+h4 {
+  font-family: "Madani";
+  font-weight: bolder;
+  font-size: 3vh;
+  color: var(--offwhite);
+}
 p {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--offwhite);
+}
+textarea {
+  width: 50vw;
 }
 nav {
   background-color: var(--transp-a);
